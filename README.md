@@ -4,7 +4,7 @@ Interactive Library
 
 ## Built With
 
-- Javascript
+- JavaScript
 - HTML
 - CSS
 
