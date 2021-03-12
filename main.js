@@ -81,6 +81,17 @@ function previousBook() {
     crazyRead.textContent = myLibrary[index].read;
 }
 
+function toggleRead() {
+    if(myLibrary[index].read === 'Read') {
+        myLibrary[index].read = 'Not Read';
+    } else {
+        myLibrary[index].read = 'Read';
+    }
+
+    const crazyRead = document.querySelector('#crazyRead');
+    crazyRead.textContent = myLibrary[index].read;
+}
+
 function removeBook() {
 
 }
