@@ -81,7 +81,22 @@ function previousBook() {
     crazyRead.textContent = myLibrary[index].read;
 }
 
+// crazyRead.toggleRead
+
+Book.prototype.toggleRead = function() {
+    if(this.read === 'Read') {
+        this.read = 'Not Read';
+    } else {
+        this.read = 'Read';
+    }
+
+    const crazyRead = document.querySelector('#crazyRead');
+    crazyRead.textContent = myLibrary[index].read;
+};
+
+/*
 function toggleRead() {
+
     if(myLibrary[index].read === 'Read') {
         myLibrary[index].read = 'Not Read';
     } else {
@@ -90,7 +105,9 @@ function toggleRead() {
 
     const crazyRead = document.querySelector('#crazyRead');
     crazyRead.textContent = myLibrary[index].read;
+
 }
+*/
 
 function removeBook() {
 
