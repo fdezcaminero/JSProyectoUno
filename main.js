@@ -81,7 +81,6 @@ function previousBook() {
     crazyRead.textContent = myLibrary[index].read;
 }
 
-// crazyRead.toggleRead
 
 Book.prototype.toggleRead = function() {
     if(this.read === 'Read') {
