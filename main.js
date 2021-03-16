@@ -17,8 +17,8 @@ var Junot = new Book("The Brief Wondrous Life of Oscar Wao", "Junot Díaz", "400
 var Watchmen = new Book("Watchmen", "Alan Moore", "540", "Read");
 
 
-function addBookToLibrary(crazyBook) {
-    myLibrary.push(crazyBook);
+function addBookToLibrary(newBook) {
+    myLibrary.push(newBook);
 }
 
 addBookToLibrary(TSAR);
@@ -28,17 +28,17 @@ addBookToLibrary(Watchmen);
 
 let index = 0;
 
-const crazyTitle = document.querySelector('#crazyTitle');
-crazyTitle.textContent = myLibrary[0].title;
+const bookTitle = document.querySelector('#bookTitle');
+bookTitle.textContent = myLibrary[0].title;
 
-const crazyAuthor = document.querySelector('#crazyAuthor');
-crazyAuthor.textContent = myLibrary[0].author;
+const bookAuthor = document.querySelector('#bookAuthor');
+bookAuthor.textContent = myLibrary[0].author;
 
-const crazyPages = document.querySelector('#crazyPages');
-crazyPages.textContent = myLibrary[0].pages;
+const bookPages = document.querySelector('#bookPages');
+bookPages.textContent = myLibrary[0].pages;
 
-const crazyRead = document.querySelector('#crazyRead');
-crazyRead.textContent = myLibrary[0].read;
+const bookRead = document.querySelector('#bookRead');
+bookRead.textContent = myLibrary[0].read;
 
 
 function nextBook() {
@@ -48,17 +48,17 @@ function nextBook() {
         index++;
     }
 
-    const crazyTitle = document.querySelector('#crazyTitle');
-    crazyTitle.textContent = myLibrary[index].title;
+    const bookTitle = document.querySelector('#bookTitle');
+    bookTitle.textContent = myLibrary[index].title;
 
-    const crazyAuthor = document.querySelector('#crazyAuthor');
-    crazyAuthor.textContent = myLibrary[index].author;
+    const bookAuthor = document.querySelector('#bookAuthor');
+    bookAuthor.textContent = myLibrary[index].author;
 
-    const crazyPages = document.querySelector('#crazyPages');
-    crazyPages.textContent = myLibrary[index].pages;
+    const bookPages = document.querySelector('#bookPages');
+    bookPages.textContent = myLibrary[index].pages;
 
-    const crazyRead = document.querySelector('#crazyRead');
-    crazyRead.textContent = myLibrary[index].read;
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = myLibrary[index].read;
 }
 
 function previousBook() {
@@ -68,17 +68,17 @@ function previousBook() {
         index--;
     }
 
-    const crazyTitle = document.querySelector('#crazyTitle');
-    crazyTitle.textContent = myLibrary[index].title;
+    const bookTitle = document.querySelector('#bookTitle');
+    bookTitle.textContent = myLibrary[index].title;
 
-    const crazyAuthor = document.querySelector('#crazyAuthor');
-    crazyAuthor.textContent = myLibrary[index].author;
+    const bookAuthor = document.querySelector('#bookAuthor');
+    bookAuthor.textContent = myLibrary[index].author;
 
-    const crazyPages = document.querySelector('#crazyPages');
-    crazyPages.textContent = myLibrary[index].pages;
+    const bookPages = document.querySelector('#bookPages');
+    bookPages.textContent = myLibrary[index].pages;
 
-    const crazyRead = document.querySelector('#crazyRead');
-    crazyRead.textContent = myLibrary[index].read;
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = myLibrary[index].read;
 
     alert ("The array is super mega empty");
 }
@@ -91,8 +91,8 @@ Book.prototype.toggleRead = function() {
         this.read = 'Read';
     }
 
-    const crazyRead = document.querySelector('#crazyRead');
-    crazyRead.textContent = myLibrary[index].read;
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = myLibrary[index].read;
 };
 
 /*
@@ -104,8 +104,8 @@ function toggleRead() {
         myLibrary[index].read = 'Read';
     }
 
-    const crazyRead = document.querySelector('#crazyRead');
-    crazyRead.textContent = myLibrary[index].read;
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = myLibrary[index].read;
 
 }
 */
@@ -130,17 +130,17 @@ function isArrayEmpty() {
 
         alert ("WOWOWOWOWOOWOWOWOWOOWOWOWOWOWOWO");
 
-        const crazyTitle = document.querySelector('#crazyTitle');
-        crazyTitle.textContent = "";
+        const bookTitle = document.querySelector('#bookTitle');
+        bookTitle.textContent = "";
 
-        const crazyAuthor = document.querySelector('#crazyAuthor');
-        crazyAuthor.textContent = "";
+        const bookAuthor = document.querySelector('#bookAuthor');
+        bookAuthor.textContent = "";
 
-        const crazyPages = document.querySelector('#crazyPages');
-        crazyPages.textContent = "";
+        const bookPages = document.querySelector('#bookPages');
+        bookPages.textContent = "";
 
-        const crazyRead = document.querySelector('#crazyRead');
-        crazyRead.textContent = "";
+        const bookRead = document.querySelector('#bookRead');
+        bookRead.textContent = "";
     }
 }
 
