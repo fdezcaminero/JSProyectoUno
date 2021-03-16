@@ -152,22 +152,22 @@ function toggleForm() {
 
 const addBookForm = document.querySelector('#addBookForm');
 
-const ftitle = addBookForm.elements['ftitle'];
-const fauthor = addBookForm.elements['fauthor'];
-const fpages = addBookForm.elements['fpages'];
-const fread = addBookForm.elements['fread'];
+const ftitle = addBookForm.elements.ftitle;
+const fauthor = addBookForm.elements.fauthor;
+const fpages = addBookForm.elements.fpages;
+const fread = addBookForm.elements.fread;
 
-let varNum = 1; //used for assigning dynamic variables
+let varNum = 1; // used for assigning dynamic variables
 
 function addBook() {
   if (ftitle.value === '') {
-    alert ('All fields are required.');
+    alert('All fields are required.');
   } else if (fauthor.value === '') {
-    alert ('All fields are required.');
+    alert('All fields are required.');
   } else if (fpages.value === '') {
-    alert ('All fields are required.');
+    alert('All fields are required.');
   } else if (fread.value === '') {
-    alert ('All fields are required.');
+    alert('All fields are required.');
   } else {
     eval('book_' + varNum + ' = new Book(ftitle.value, fauthor.value, fpages.value, fread.value);');
     addBookToLibrary(eval('book_' + varNum));
@@ -187,6 +187,11 @@ function addBook() {
       const bookRead = document.querySelector('#bookRead');
       bookRead.textContent = myLibrary[0].read;
     }
+
+    ftitle.value = '';
+    fauthor.value = '';
+    fpages.value = '';
+    fread.value = '';
 
     toggleForm();
   }
