@@ -1,6 +1,5 @@
 let myLibrary = [];
 
-
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -12,7 +11,7 @@ function addBookToLibrary(newBook) {
     myLibrary.push(newBook);
 }
 
-/*
+// you can comment from this line to the next comment, to try out the code with an empty library
 
 var TSAR = new Book("The Sun Also Rises", "Ernest Hemingway", "500", "Read");
 
@@ -23,13 +22,12 @@ var Junot = new Book("The Brief Wondrous Life of Oscar Wao", "Junot Díaz", "400
 var Watchmen = new Book("Watchmen", "Alan Moore", "540", "Read");
 
 
-
 addBookToLibrary(TSAR);
 addBookToLibrary(Gatsby);
 addBookToLibrary(Junot);
 addBookToLibrary(Watchmen);
 
-*/
+// comment out everything before this line and after the previous comment to test out the code with an empty library
 
 let index = 0;
 
