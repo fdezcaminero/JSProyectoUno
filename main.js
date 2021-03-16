@@ -11,7 +11,7 @@ function addBookToLibrary(newBook) {
     myLibrary.push(newBook);
 }
 
-// you can comment from this line to the next comment, to try out the code with an empty library
+// you can comment out from this line to the next comment, to try out the code with an empty library
 
 var TSAR = new Book("The Sun Also Rises", "Ernest Hemingway", "500", "Read");
 
@@ -152,7 +152,7 @@ function arrayIsEmpty() {
     const card = document.querySelector('.card');
     const addingForm = document.querySelector('.addingForm');
 
-function newBookForm() {
+function toggleForm() {
     card.classList.toggle('hidden-form');
     addingForm.classList.toggle('hidden-form');
 }
@@ -167,7 +167,7 @@ function newBookForm() {
 
     const fread = addBookForm.elements['fread'];
 
-    let varNum = 1;
+    let varNum = 1; //used for assigning dynamic variables
     
 function addBook() {
 
@@ -199,6 +199,6 @@ function addBook() {
             bookRead.textContent = myLibrary[0].read;            
         }
 
-        newBookForm(); //toggles display none
+        toggleForm();
     }
 }
