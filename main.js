@@ -8,6 +8,12 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+function addBookToLibrary(newBook) {
+    myLibrary.push(newBook);
+}
+
+/*
+
 var TSAR = new Book("The Sun Also Rises", "Ernest Hemingway", "500", "Read");
 
 var Gatsby = new Book("The Great Gatsby", "Fitzgerald", "300", "Not Read");
@@ -17,28 +23,29 @@ var Junot = new Book("The Brief Wondrous Life of Oscar Wao", "Junot Díaz", "400
 var Watchmen = new Book("Watchmen", "Alan Moore", "540", "Read");
 
 
-function addBookToLibrary(newBook) {
-    myLibrary.push(newBook);
-}
 
 addBookToLibrary(TSAR);
 addBookToLibrary(Gatsby);
 addBookToLibrary(Junot);
 addBookToLibrary(Watchmen);
 
+*/
+
 let index = 0;
 
-const bookTitle = document.querySelector('#bookTitle');
-bookTitle.textContent = myLibrary[0].title;
+if (myLibrary.length > 0) {
+    const bookTitle = document.querySelector('#bookTitle');
+    bookTitle.textContent = myLibrary[0].title;
 
-const bookAuthor = document.querySelector('#bookAuthor');
-bookAuthor.textContent = myLibrary[0].author;
+    const bookAuthor = document.querySelector('#bookAuthor');
+    bookAuthor.textContent = myLibrary[0].author;
 
-const bookPages = document.querySelector('#bookPages');
-bookPages.textContent = myLibrary[0].pages;
+    const bookPages = document.querySelector('#bookPages');
+    bookPages.textContent = myLibrary[0].pages;
 
-const bookRead = document.querySelector('#bookRead');
-bookRead.textContent = myLibrary[0].read;
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = myLibrary[0].read;
+}
 
 
 function nextBook() {
@@ -96,12 +103,6 @@ Book.prototype.toggleRead = function() {
 function removeBook() {
     myLibrary.splice(index, 1);
 
-    /*
-    index--; //this is done so when we run nextBook() in the next line, we fall on the same position of the object we erased
-
-    nextBook();
-    */
-
     if (myLibrary.length === 0) {
         arrayIsEmpty();
     } else if (index >= myLibrary.length) {
@@ -150,4 +151,56 @@ function arrayIsEmpty() {
     
 }
 
-//do logic for empty myLibrary array
+    const card = document.querySelector('.card');
+    const addingForm = document.querySelector('.addingForm');
+
+function newBookForm() {
+    card.classList.toggle('hidden-form');
+    addingForm.classList.toggle('hidden-form');
+}
+
+    const addBookForm = document.querySelector('#addBookForm');
+
+    const ftitle = addBookForm.elements['ftitle'];
+
+    const fauthor = addBookForm.elements['fauthor'];
+
+    const fpages = addBookForm.elements['fpages'];
+
+    const fread = addBookForm.elements['fread'];
+
+    let varNum = 1;
+    
+function addBook() {
+
+    if (ftitle.value === '') {
+        alert ("All fields are required.");
+    } else if (fauthor.value === '') {
+        alert ("All fields are required.");
+    } else if (fpages.value === '') {
+        alert ("All fields are required.");
+    } else if (fread.value === '') {
+        alert ("All fields are required.");
+    } else {
+        eval('book_' + varNum + ' = new Book(ftitle.value, fauthor.value, fpages.value, fread.value);');
+        addBookToLibrary(eval("book_" + varNum));
+
+        varNum++;
+
+        if (myLibrary.length === 1) {
+            const bookTitle = document.querySelector('#bookTitle');
+            bookTitle.textContent = myLibrary[0].title;
+        
+            const bookAuthor = document.querySelector('#bookAuthor');
+            bookAuthor.textContent = myLibrary[0].author;
+        
+            const bookPages = document.querySelector('#bookPages');
+            bookPages.textContent = myLibrary[0].pages;
+        
+            const bookRead = document.querySelector('#bookRead');
+            bookRead.textContent = myLibrary[0].read;            
+        }
+
+        newBookForm(); //toggles display none
+    }
+}

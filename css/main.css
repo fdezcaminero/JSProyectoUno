@@ -1,3 +1,7 @@
 .disp-inline {
     display: inline;
 }
+
+.hidden-form {
+    display: none;
+}
