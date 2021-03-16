@@ -79,6 +79,8 @@ function previousBook() {
 
     const crazyRead = document.querySelector('#crazyRead');
     crazyRead.textContent = myLibrary[index].read;
+
+    alert ("The array is super mega empty");
 }
 
 
@@ -109,12 +111,37 @@ function toggleRead() {
 */
 
 function removeBook() {
+    myLibrary.splice(index, 1);
 
+    index--; //this is done so when we run nextBook() in the next line, we fall on the same position of the object we erased
+
+    nextBook();
+
+    isArrayEmpty();
 }
 
-/*
-PrintStuff.prototype.print = function () {
-    console.log(this.documents);
-    }
+function isArrayEmpty() {
 
-*/
+    var chula = myLibrary.length;
+
+    alert ("It gets to THIS POINT: " + chula.toString());
+
+    if (myLibrary.length === 0 ) {
+
+        alert ("WOWOWOWOWOOWOWOWOWOOWOWOWOWOWOWO");
+
+        const crazyTitle = document.querySelector('#crazyTitle');
+        crazyTitle.textContent = "";
+
+        const crazyAuthor = document.querySelector('#crazyAuthor');
+        crazyAuthor.textContent = "";
+
+        const crazyPages = document.querySelector('#crazyPages');
+        crazyPages.textContent = "";
+
+        const crazyRead = document.querySelector('#crazyRead');
+        crazyRead.textContent = "";
+    }
+}
+
+//do logic for empty myLibrary array
