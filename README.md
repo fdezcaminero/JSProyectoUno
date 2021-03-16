@@ -1,6 +1,6 @@
 # JSProyectoUno
 
-Interactive Library
+Interactive Library. The code easily searches through an array of books. It can also add new books and remove old ones.
 
 ## Built With
 
