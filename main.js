@@ -79,8 +79,6 @@ function previousBook() {
 
     const bookRead = document.querySelector('#bookRead');
     bookRead.textContent = myLibrary[index].read;
-
-    alert ("The array is super mega empty");
 }
 
 
@@ -95,53 +93,61 @@ Book.prototype.toggleRead = function() {
     bookRead.textContent = myLibrary[index].read;
 };
 
-/*
-function toggleRead() {
-
-    if(myLibrary[index].read === 'Read') {
-        myLibrary[index].read = 'Not Read';
-    } else {
-        myLibrary[index].read = 'Read';
-    }
-
-    const bookRead = document.querySelector('#bookRead');
-    bookRead.textContent = myLibrary[index].read;
-
-}
-*/
-
 function removeBook() {
     myLibrary.splice(index, 1);
 
+    /*
     index--; //this is done so when we run nextBook() in the next line, we fall on the same position of the object we erased
 
     nextBook();
+    */
 
-    isArrayEmpty();
-}
-
-function isArrayEmpty() {
-
-    var chula = myLibrary.length;
-
-    alert ("It gets to THIS POINT: " + chula.toString());
-
-    if (myLibrary.length === 0 ) {
-
-        alert ("WOWOWOWOWOOWOWOWOWOOWOWOWOWOWOWO");
+    if (myLibrary.length === 0) {
+        arrayIsEmpty();
+    } else if (index >= myLibrary.length) {
+        index = myLibrary.length - 1;
 
         const bookTitle = document.querySelector('#bookTitle');
-        bookTitle.textContent = "";
+        bookTitle.textContent = myLibrary[index].title;
 
         const bookAuthor = document.querySelector('#bookAuthor');
-        bookAuthor.textContent = "";
+        bookAuthor.textContent = myLibrary[index].author;
 
         const bookPages = document.querySelector('#bookPages');
-        bookPages.textContent = "";
+        bookPages.textContent = myLibrary[index].pages;
 
         const bookRead = document.querySelector('#bookRead');
-        bookRead.textContent = "";
+        bookRead.textContent = myLibrary[index].read;
+    } else {
+        const bookTitle = document.querySelector('#bookTitle');
+        bookTitle.textContent = myLibrary[index].title;
+
+        const bookAuthor = document.querySelector('#bookAuthor');
+        bookAuthor.textContent = myLibrary[index].author;
+
+        const bookPages = document.querySelector('#bookPages');
+        bookPages.textContent = myLibrary[index].pages;
+
+        const bookRead = document.querySelector('#bookRead');
+        bookRead.textContent = myLibrary[index].read;    
     }
+
+}
+
+function arrayIsEmpty() {
+
+    const bookTitle = document.querySelector('#bookTitle');
+    bookTitle.textContent = "";
+
+    const bookAuthor = document.querySelector('#bookAuthor');
+    bookAuthor.textContent = "";
+
+    const bookPages = document.querySelector('#bookPages');
+    bookPages.textContent = "";
+
+    const bookRead = document.querySelector('#bookRead');
+    bookRead.textContent = "";
+    
 }
 
 //do logic for empty myLibrary array
