@@ -161,10 +161,10 @@ function hideWarning() {
 
 const addBookForm = document.querySelector('#addBookForm');
 
-const ftitle = addBookForm.elements.ftitle;
-const fauthor = addBookForm.elements.fauthor;
-const fpages = addBookForm.elements.fpages;
-const fread = addBookForm.elements.fread;
+const fvariable = addBookForm.elements;
+const {
+  ftitle, fauthor, fpages, fread,
+} = fvariable;
 
 let varNum = 1; // used for assigning dynamic variables
 
