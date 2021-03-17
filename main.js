@@ -150,6 +150,16 @@ function toggleForm() {
   addingForm.classList.toggle('hidden-form');
 }
 
+const alertMsg = document.querySelector('.alertMsg');
+
+function bookWarning() {
+  alertMsg.classList.remove('hidden-form');
+}
+
+function hideWarning() {
+  alertMsg.classList.add('hidden-form');
+}
+
 const addBookForm = document.querySelector('#addBookForm');
 
 const ftitle = addBookForm.elements.ftitle;
@@ -161,13 +171,13 @@ let varNum = 1; // used for assigning dynamic variables
 
 function addBook() {
   if (ftitle.value === '') {
-    alert('All fields are required.');
+    bookWarning();
   } else if (fauthor.value === '') {
-    alert('All fields are required.');
+    bookWarning();
   } else if (fpages.value === '') {
-    alert('All fields are required.');
+    bookWarning();
   } else if (fread.value === '') {
-    alert('All fields are required.');
+    bookWarning();
   } else {
     eval('book_' + varNum + ' = new Book(ftitle.value, fauthor.value, fpages.value, fread.value);');
     addBookToLibrary(eval('book_' + varNum));
@@ -194,5 +204,6 @@ function addBook() {
     fread.value = '';
 
     toggleForm();
+    hideWarning();
   }
 }

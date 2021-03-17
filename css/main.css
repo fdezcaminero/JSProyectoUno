@@ -5,3 +5,7 @@
 .hidden-form {
   display: none;
 }
+
+.red-color {
+  color: red;
+}

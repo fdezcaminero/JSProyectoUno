@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="alertMsg hidden-form">
+      <p class="red-color">All fields are required!</p>
+    </div>
     <div class="card">
       <p>Title: <span id="bookTitle"></span></p><br>
       <p>Author: <span id="bookAuthor"></span></p><br>
@@ -50,7 +53,7 @@
       </form>
 
           <button onclick="addBook()">Add Book</button>
-          <button onclick="toggleForm()">Cancel</button>
+          <button onclick="toggleForm();hideWarning();">Cancel</button>
     </div>
 
     <script src="main.js"></script>
