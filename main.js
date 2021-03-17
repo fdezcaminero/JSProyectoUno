@@ -82,17 +82,16 @@ function previousBook() {
   bookRead.textContent = myLibrary[index].read;
 }
 
-
-Book.prototype.toggleRead = function () {
-  if (this.read === 'Read') {
-    this.read = 'Not Read';
+function toggleRead() {
+  if (myLibrary[index].read === 'Read') {
+    myLibrary[index].read = 'Not Read';
   } else {
-    this.read = 'Read';
+    myLibrary[index].read = 'Read';
   }
 
   const bookRead = document.querySelector('#bookRead');
   bookRead.textContent = myLibrary[index].read;
-};
+}
 
 function arrayIsEmpty() {
   const bookTitle = document.querySelector('#bookTitle');
@@ -215,3 +214,4 @@ document.getElementById('newBookBtn').addEventListener('click', toggleForm);
 document.getElementById('addBookBtn').addEventListener('click', addBook);
 document.getElementById('cancelBtn').addEventListener('click', toggleForm);
 document.getElementById('cancelBtn').addEventListener('click', hideWarning);
+document.getElementById('toggleReadBtn').addEventListener('click', toggleRead);
