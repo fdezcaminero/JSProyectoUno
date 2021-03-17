@@ -207,3 +207,11 @@ function addBook() {
     hideWarning();
   }
 }
+
+document.getElementById('previousBookBtn').addEventListener('click', previousBook);
+document.getElementById('nextBookBtn').addEventListener('click', nextBook);
+document.getElementById('removeBookBtn').addEventListener('click', removeBook);
+document.getElementById('newBookBtn').addEventListener('click', toggleForm);
+document.getElementById('addBookBtn').addEventListener('click', addBook);
+document.getElementById('cancelBtn').addEventListener('click', toggleForm);
+document.getElementById('cancelBtn').addEventListener('click', hideWarning);

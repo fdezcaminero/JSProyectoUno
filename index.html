@@ -18,12 +18,11 @@
       <p class="disp-inline">Read: <span id="bookRead"></span></p> <button onclick="myLibrary[index].toggleRead()">...</button>
       <br><br>
           
-      <button onclick="previousBook()">Previous</button>
-      <button onclick="nextBook()">Next</button>
-      <button onclick="removeBook()">REMOVE BOOK</button>
-          
-          
-      <button onclick="toggleForm()">NEW BOOK</button>
+      <button id="previousBookBtn">Previous</button>
+      <button id="nextBookBtn">Next</button>
+      <button id="removeBookBtn">REMOVE BOOK</button>
+
+      <button id="newBookBtn">NEW BOOK</button>
     </div>
 
     <div class="addingForm hidden-form">
@@ -52,8 +51,8 @@
         <br>
       </form>
 
-          <button onclick="addBook()">Add Book</button>
-          <button onclick="toggleForm();hideWarning();">Cancel</button>
+          <button id="addBookBtn">Add Book</button>
+          <button id="cancelBtn" onclick="toggleForm();hideWarning();">Cancel</button>
     </div>
 
     <script src="main.js"></script>
