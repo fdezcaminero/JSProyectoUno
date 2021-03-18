@@ -13,7 +13,7 @@ Interactive Library. The code easily searches through an array of books. It can 
 👤 **Jose Fernandez Caminero**
 - Github: [@fdezcaminero](https://github.com/fdezcaminero)
 - Twitter: [@fdezcaminero](https://twitter.com/fdezcaminero)
-- Linkedin: [Linkedin](https://www.linkedin.com/in/fdezcaminero/)
+- Linkedin: [fdezcaminero](https://www.linkedin.com/in/fdezcaminero/)
 
 ## Show your support
 
