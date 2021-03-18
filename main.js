@@ -166,7 +166,7 @@ const {
   ftitle, fauthor, fpages, fread,
 } = fvariable;
 
-let varNum = 1; // used for assigning dynamic variables
+let varNum = 1;
 
 function addBook() {
   if (ftitle.value === '') {
