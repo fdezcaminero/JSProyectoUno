@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Proyecto Uno</title>
     <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+  </head>
+  <body>
+    <div class="alertMsg hidden-form">
+      <p class="red-color">All fields are required!</p>
+    </div>
     <div class="card">
-        <p>Title: <span id="bookTitle"></span></p><br>
-        <p>Author: <span id="bookAuthor"></span></p><br>
-        <p>Pages: <span id="bookPages"></span></p><br>
-        <p class="disp-inline">Read: <span id="bookRead"></span></p> <button onclick="myLibrary[index].toggleRead()">...</button>
-        <br><br>
-        
-        <button onclick="previousBook()">Previous</button>
-        <button onclick="nextBook()">Next</button>
-        <button onclick="removeBook()">REMOVE BOOK</button>
-        
-        
-        <button onclick="newBookForm()">NEW BOOK</button>
+      <p>Title: <span id="bookTitle"></span></p><br>
+      <p>Author: <span id="bookAuthor"></span></p><br>
+      <p>Pages: <span id="bookPages"></span></p><br>
+      <p class="disp-inline">Read: <span id="bookRead"></span></p> <button id="toggleReadBtn">...</button>
+      <br><br>
+          
+      <button id="previousBookBtn">Previous</button>
+      <button id="nextBookBtn">Next</button>
+      <button id="removeBookBtn">REMOVE BOOK</button>
+
+      <button id="newBookBtn">NEW BOOK</button>
     </div>
 
     <div class="addingForm hidden-form">
-        <form id="addBookForm">
-            <label for="ftitle">Title:</label><br>
-            <input type="text" id="ftitle" name="ftitle"><br>
+      <form id="addBookForm">
+        <label for="ftitle">Title:</label><br>
+        <input type="text" id="ftitle" name="ftitle"><br>
 
-            <br>
-            
-            <label for="fauthor">Author:</label><br>
-            <input type="text" id="fauthor" name="fauthor"><br>
+        <br>
+                
+        <label for="fauthor">Author:</label><br>
+        <input type="text" id="fauthor" name="fauthor"><br>
 
-            <br>
+        <br>
 
-            <label for="fpages">Pages:</label><br>
-            <input type="number" id="fpages" name="fpages"><br>
+        <label for="fpages">Pages:</label><br>
+        <input type="number" id="fpages" name="fpages"><br>
 
-            <br>
+        <br>
 
-            <label for="fread">Read:</label><br>
-            <input type="radio" id="haveread" name="fread" value="Read">
-            <label for="haveread">Read</label><br>
-            <input type="radio" id="havenotread" name="fread" value="Not Read">
-            <label for="havenotread">Not Read</label><br>
+        <label for="fread">Read:</label><br>
+        <input type="radio" id="haveread" name="fread" value="Read">
+        <label for="haveread">Read</label><br>
+        <input type="radio" id="havenotread" name="fread" value="Not Read">
+        <label for="havenotread">Not Read</label><br>
 
-            <br>
-        </form>
+        <br>
+      </form>
 
-        <button onclick="addBook()">Add Book</button>
-        <button onclick="newBookForm()">Cancel</button> <!-- This just toggles the display none -->
+          <button id="addBookBtn">Add Book</button>
+          <button id="cancelBtn">Cancel</button>
     </div>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
