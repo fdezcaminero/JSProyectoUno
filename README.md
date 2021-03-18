@@ -2,6 +2,10 @@
 
 Interactive Library. The code easily searches through an array of books. It can also add new books and remove old ones.
 
+## Warning!
+
+This is just a programming exercise coded for educational purposes. At the moment, the library is not connected to any database. Which means that any changes you make to it will be lost once you close the application.
+
 ## Live Demo!
 
 [Live Demo!](https://fdezcaminero.github.io/JSProyectoUno/)
