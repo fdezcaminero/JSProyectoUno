@@ -178,8 +178,8 @@ function addBook() {
   } else if (fread.value === '') {
     bookWarning();
   } else {
-    eval('book_' + varNum + ' = new Book(ftitle.value, fauthor.value, fpages.value, fread.value);');
-    addBookToLibrary(eval('book_' + varNum));
+    window[`book_${varNum}`] = new Book(ftitle.value, fauthor.value, fpages.value, fread.value);
+    addBookToLibrary(window[`book_${varNum}`]);
 
     varNum += 1;
 
